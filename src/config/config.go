@@ -26,10 +26,10 @@ type Config struct {
 }
 
 func (c *Config) Check() (bool, error) {
-	if !util.IsFileExist(c.Spider.UrlListFile) {
+	if !utils.IsFileExist(c.Spider.UrlListFile) {
 		return false, errors.New("UrlListFile not exist: " + c.Spider.UrlListFile)
 	}
-	if !util.IsDirExist(c.Spider.OutputDirectory) {
+	if !utils.IsDirExist(c.Spider.OutputDirectory) {
 		return false, errors.New("OutputDirectory not exist: " + c.Spider.OutputDirectory)
 	}
 	if c.Spider.CrawlInterval < 0 {
