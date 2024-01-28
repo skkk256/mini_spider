@@ -1,9 +1,9 @@
-package util
+package utils
 
 import (
 	"encoding/json"
 	"errors"
-	"io/ioutil"
+	"os"
 )
 
 // depth of start seed
@@ -18,7 +18,7 @@ func GetSeedFromFile(path string, isDownload bool) (map[string]bool, error) {
 	if !IsFileExist(path) {
 		return nil, errors.New("file not exist")
 	}
-	data, err := ioutil.ReadFile(path)
+	data, err := os.ReadFile(path)
 	if err != nil {
 		return nil, err
 	}

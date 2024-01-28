@@ -1,9 +1,8 @@
-package util
+package utils
 
 import (
 	"errors"
 	"io"
-	"io/ioutil"
 	"net/url"
 	"os"
 	"path"
@@ -88,7 +87,7 @@ func TransCharsetUTF8(contentType string, reader io.Reader) (string, error) {
 
 	var targetBytes []byte
 	// io.Reader -> []byte
-	if targetBytes, err = ioutil.ReadAll(desReader); err != nil {
+	if targetBytes, err = io.ReadAll(desReader); err != nil {
 		return "", err
 	}
 	return string(targetBytes), nil
