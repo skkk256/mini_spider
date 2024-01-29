@@ -15,13 +15,13 @@ import (
 
 type Config struct {
 	Spider struct {
-		UrlListFile     string // 种子文件路径
-		OutputDirectory string // 下载目录
-		MaxDepth        int    // 最大抓取深度
-		CrawlInterval   int    // 抓取间隔
-		CrawlTimeout    int    // 抓取超时
-		TargetUrl       string // 目标文件正则
-		ThreadCount     int    // 抓取routine数
+		UrlListFile     string 
+		OutputDirectory string
+		MaxDepth        int
+		CrawlInterval   int
+		CrawlTimeout    int
+		TargetUrl       string
+		ThreadCount     int
 	}
 }
 

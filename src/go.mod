@@ -9,6 +9,8 @@ require (
 )
 
 require (
+	github.com/baidu/go-lib v0.0.0-20210902034828-42829d4bdecd
+	github.com/jackdanger/collectlinks v0.0.0-20160421202702-24c4ee2870ba
 	github.com/toolkits/file v0.0.0-20160325033739-a5b3c5147e07 // indirect
 	golang.org/x/text v0.14.0 // indirect
 	gopkg.in/gcfg.v1 v1.2.3 // indirect

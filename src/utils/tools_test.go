@@ -32,7 +32,7 @@ func TestIsDirExist(t *testing.T) {
 
 func TestTransUrlFromRelToAbs(t *testing.T) {
 	baseUrl, _ := url.Parse("http://www.baidu.com")
-	refUrl := "/testurl"
+	refUrl := "http://www.baidu.com/testurl"
 	resUrl, err := TransUrlFromRelToAbs(baseUrl, refUrl)
 	if err != nil || resUrl != "http://www.baidu.com/testurl" {
 		t.Error("test TransUrlFromRelToAbs() failed " + err.Error())
