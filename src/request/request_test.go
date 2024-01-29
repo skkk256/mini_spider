@@ -15,7 +15,7 @@ func TestNewRequest(t *testing.T) {
 	}
 
 	client := &http.Client{}
-	resp, _ := client.Do(req.Req)
+	resp, _ := client.Do(req.Request)
 	fmt.Println(resp)
 	fmt.Println()
 }
