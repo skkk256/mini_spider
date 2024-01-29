@@ -21,7 +21,6 @@ type Crawler struct {
 	concurrency   int
 	crawlMaxDepth int
 	origins       []string
-	visited	      map[string]bool
 	crawlInterval time.Duration
 	spiderManager *manager.RoutineManager
 	taskQueue     *queue.TaskQueue
@@ -100,7 +99,7 @@ func (c *Crawler) Start() {
 		if c.isFinish() {
 			break
 		}
-		
+
 		if c.taskQueue.Empty() {
 			continue
 		}
